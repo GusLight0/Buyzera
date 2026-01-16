@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas as Ofertas - Buyzera</title>
+    <link rel="shortcut icon" href="./public/logo buyzada (sem fundo).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ofertas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="./public/logo buyzada (sem fundo).png" alt="logo do site buyzada">
+                </div>
+                <span class="logo-text"><strong>Buy</strong>zera</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="ofertas.html" class="nav-link active">Ofertas</a>
+                <a href="index.html#categorias" class="nav-link">Categorias</a>
+                <a href="index.html#parceiros" class="nav-link">Parceiros</a>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                </svg>
+                <input type="text" id="headerSearchInput" placeholder="Buscar ofertas...">
+            </div>
+
+            <!-- Header CTA -->
+            <a href="index.html" class="header-cta">Voltar ao Início</a>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="ofertas.html" class="nav-link active">Ofertas</a>
+            <a href="index.html#categorias" class="nav-link">Categorias</a>
+            <a href="index.html#parceiros" class="nav-link">Parceiros</a>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+                <span>Todas as Ofertas</span>
+            </div>
+            <h1>Todas as Ofertas</h1>
+            <p>Encontre as melhores promoções da Shopee e Mercado Livre</p>
+        </div>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="offers-main">
+        <div class="container offers-layout">
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                        </svg>
+                        Filtros
+                    </h3>
+                    <button class="clear-filters-btn" id="clearFilters">Limpar</button>
+                </div>
+
+                <!-- Store Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Loja</label>
+                    <div class="filter-options">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="shopee" class="store-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">
+                                <span class="store-dot shopee"></span>
+                                Shopee
+                            </span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="mercado-livre" class="store-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">
+                                <span class="store-dot mercadolivre"></span>
+                                Mercado Livre
+                            </span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="amazon" class="store-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">
+                                <span class="store-dot amazon"></span>
+                                Amazon
+                            </span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="aliexpress" class="store-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">
+                                <span class="store-dot aliexpress"></span>
+                                AliExpress
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Categoria</label>
+                    <div class="filter-options">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="eletronicos" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Eletrônicos</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="moda" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Moda</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="casa" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Casa</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="esportes" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Esportes</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="games" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Games</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="beleza" class="category-filter" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Beleza</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Faixa de Preço</label>
+                    <div class="price-inputs">
+                        <div class="price-input-wrapper">
+                            <span>R$</span>
+                            <input type="number" id="priceMin" placeholder="Mín" min="0">
+                        </div>
+                        <span class="price-separator">até</span>
+                        <div class="price-input-wrapper">
+                            <span>R$</span>
+                            <input type="number" id="priceMax" placeholder="Máx" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discount Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Desconto mínimo</label>
+                    <div class="discount-slider-wrapper">
+                        <input type="range" id="discountSlider" min="0" max="70" value="0" step="5">
+                        <div class="discount-value">
+                            <span id="discountValue">0</span>% ou mais
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apply Filters Button (Mobile) -->
+                <button class="apply-filters-btn" id="applyFiltersMobile">
+                    Aplicar Filtros
+                </button>
+            </aside>
+
+            <!-- Products Content -->
+            <div class="offers-content">
+                <!-- Mobile Filter Toggle -->
+                <button class="mobile-filter-toggle" id="mobileFilterToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                    </svg>
+                    Filtros
+                </button>
+
+                <!-- Results Header -->
+                <div class="results-header">
+                    <div class="results-count">
+                        <span id="resultsCount">0</span> produtos encontrados
+                    </div>
+                    <div class="sort-wrapper">
+                        <label for="sortSelect">Ordenar por:</label>
+                        <select id="sortSelect">
+                            <option value="relevancia">Relevância</option>
+                            <option value="menor-preco">Menor preço</option>
+                            <option value="maior-preco">Maior preço</option>
+                            <option value="maior-desconto">Maior desconto</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be rendered here by JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                    <h3>Nenhum produto encontrado</h3>
+                    <p>Tente ajustar os filtros ou buscar por outro termo</p>
+                    <button class="btn btn-primary" id="resetFiltersBtn">Limpar filtros</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========= banner de ofertas ========== -->
+
+    <div class="banner-oferta">
+        <img src="./public/banner-ofertas.png" alt="ofertas imperdíveis">
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" style="background-color: white;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <img src="./public/logo buyzada (sem fundo).png" alt="logo do nosso site Buyzera">
+                        </div>
+                        <span class="logo-text"><strong>Buy</strong>zera</span>
+                    </a>
+                    <p>Reunimos as melhores ofertas em um só lugar para você economizar tempo e dinheiro.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: orangered;">Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="index.html#categorias">Categorias</a></li>
+                        <li><a href="index.html#parceiros">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: orange;">Legal</h4>
+                    <ul>
+                        <li><a id="openTerms" style="cursor: pointer;">Termos de Uso</a></li>
+                        <li><button disabled style="background:none;border:none;color:inherit;cursor:pointer;padding:0;font:inherit;">Privacidade</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="affiliate-notice">Este site contém links de afiliados. Podemos receber comissão por compras realizadas através desses links.</p>
+                <p class="copyright">© 2026 Buyzera. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="termsOverlay" class="terms-overlay"></div>
+
+    <div id="termsModal" class="terms-modal">
+
+        <h1>Política de Privacidade</h1>
+
+        <p>
+            A sua privacidade é importante para nós. Esta Política de Privacidade
+            descreve como o site <strong>Buyzera</strong> trata as informações dos
+            usuários.
+        </p>
+
+        <h2>1. Coleta de informações</h2>
+        <p>
+            Não coletamos dados pessoais diretamente. Podemos coletar informações
+            automáticas como endereço IP, tipo de navegador e páginas acessadas por meio
+            de cookies.
+        </p>
+
+        <h2>2. Uso de cookies</h2>
+        <p>
+            Utilizamos cookies próprios e de terceiros para fins estatísticos e para
+            rastreamento de afiliados da Shopee e Mercado Livre.
+        </p>
+
+        <h2>3. Compartilhamento de dados</h2>
+        <p>
+            As informações coletadas podem ser compartilhadas com plataformas de
+            terceiros apenas para viabilizar o funcionamento dos links de afiliado.
+        </p>
+
+        <h2>4. WhatsApp</h2>
+        <p>
+            Ao entrar em contato via WhatsApp, os dados fornecidos serão utilizados
+            exclusivamente para atendimento.
+        </p>
+
+        <h2>5. Direitos do usuário</h2>
+        <p>
+            O usuário pode solicitar informações, correção ou exclusão de dados, conforme
+            previsto na Lei Geral de Proteção de Dados (LGPD).
+        </p>
+
+        <h2>6. Alterações</h2>
+        <p>
+            Esta Política de Privacidade pode ser alterada a qualquer momento, sem aviso
+            prévio.
+        </p>
+
+        <button id="acceptTerms">Aceitar</button>
+</div>
+
+    <div id="cookieBanner" class="cookie-banner">
+    <p>
+        Utilizamos cookies para melhorar sua experiência e para fins de rastreamento de afiliados. Ao continuar, você concorda com nossa
+        <a id="openTerms">Política de Uso</a>.
+    </p>
+
+    <button id="acceptCookies">Aceitar</button>
+    </div>
+
+
+    <script src="ofertas.js"></script>
+</body>
+</html>
