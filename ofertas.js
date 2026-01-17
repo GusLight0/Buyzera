@@ -211,6 +211,18 @@ document.addEventListener("DOMContentLoaded", () => {
       link: "https://s.shopee.com.br/2g4x5xb8Yz",
       featured: false,
     },
+    {
+      id: 18,
+      name: "Tapete Belga Estampado Para Sala Quarto De Luxo",
+      image: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhspu0ph2jgh84@resize_w1080_nl.webp",
+      priceOld: 888.00,
+      priceCurrent: 229.98,
+      discount: 74,
+      store: "shopee",
+      category: "casa",
+      link: "https://s.shopee.com.br/3Ve5cVClUK",
+      featured: false,
+    },
   ]
 
   // ========================================
