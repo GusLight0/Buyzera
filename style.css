@@ -1274,7 +1274,9 @@ body {
 .lifestyle-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -1285,7 +1287,7 @@ body {
 
 .lifestyle-card {
   position: relative;
-  height: 400px;
+  height: 280px;
   background: rgba(20, 20, 20, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
@@ -1298,7 +1300,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 24px;
   text-align: center;
 }
 
@@ -1323,7 +1325,7 @@ body {
 }
 
 .lifestyle-icon {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   display: block;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1335,7 +1337,7 @@ body {
 }
 
 .lifestyle-content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
   margin: 0;

@@ -80,7 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section[id]")
 
   function setActiveNav() {
-    const scrollPos = window.pageYOffset + 150
+    // Offset ajustado para 250px para compensar o header e garantir
+    // que a seção correta seja ativada logo após o clique/scroll
+    const scrollPos = window.scrollY + 250
+    
+    let currentSectionId = "home"
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop
@@ -88,26 +92,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionId = section.getAttribute("id")
 
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active")
-          if (link.getAttribute("href") === "#" + sectionId) {
-            link.classList.add("active")
-          }
-        })
+        currentSectionId = sectionId
       }
     })
 
-    if (window.pageYOffset < 150) {
-      navLinks.forEach((link) => {
-        link.classList.remove("active")
-        if (link.getAttribute("href") === "#" || link.textContent.trim() === "Início") {
+    if (window.scrollY < 100) {
+      currentSectionId = "home"
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active")
+      const href = link.getAttribute("href")
+
+      if (currentSectionId === "home") {
+        if (href === "index.html" || href === "#" || link.textContent.trim() === "Início") {
           link.classList.add("active")
         }
-      })
-    }
+      } else {
+        if (href === "#" + currentSectionId) {
+          link.classList.add("active")
+        }
+      }
+    })
   }
 
   window.addEventListener("scroll", setActiveNav)
+  setActiveNav()
 
   // ========================================
   // INTERSECTION OBSERVER ANIMATIONS
