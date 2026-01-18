@@ -78,10 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // ========================================
   const navLinks = document.querySelectorAll(".nav-link")
   const sections = document.querySelectorAll("section[id]")
+  
+  // Verifica se estamos na página inicial para ativar o comportamento de scroll spy
+  const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/") || window.location.pathname.includes("/Buyzera/");
 
   function setActiveNav() {
-    // Offset ajustado para 250px para compensar o header e garantir
-    // que a seção correta seja ativada logo após o clique/scroll
+    if (!isHomePage) return; // Não executa a lógica de scroll se não for a home
+
     const scrollPos = window.scrollY + 250
     
     let currentSectionId = "home"
@@ -105,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const href = link.getAttribute("href")
 
       if (currentSectionId === "home") {
-        if (href === "index.html" || href === "#" || link.textContent.trim() === "Início") {
+        if ((href === "index.html" || href === "#" || link.textContent.trim() === "Início") && !link.classList.contains("nav-link-flash")) {
           link.classList.add("active")
         }
       } else {

@@ -224,6 +224,30 @@ body {
   background: var(--primary-light);
 }
 
+/* Estilo Especial Ofertas Relâmpago */
+.nav-link-flash {
+  background-color: #000 !important;
+  color: var(--accent) !important; /* Amarelo */
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 8px rgba(255, 225, 53, 0.4);
+  text-shadow: 0 0 5px rgba(255, 225, 53, 0.6);
+  margin-left: 12px; /* Isolamento */
+  animation: neonPulse 2s infinite alternate;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.nav-link-flash:hover {
+  background-color: var(--accent) !important;
+  color: #000 !important;
+  box-shadow: 0 0 20px rgba(255, 225, 53, 0.8);
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 5px rgba(255, 225, 53, 0.4); }
+  100% { box-shadow: 0 0 15px rgba(255, 225, 53, 0.8), 0 0 5px var(--accent); }
+}
+
 /* Search Bar */
 .search-bar {
   display: none;

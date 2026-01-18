@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Relâmpago - Buyzera</title>
+    <link rel="shortcut icon" href="./public/logo buyzada (sem fundo).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ofertas-relampago.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== ANNOUNCEMENT BAR ========== -->
+    <div class="announcement-bar">
+        <p>Produtos por tem limitados com descontos de até <span class="announcement-highlight">-70%</span></p>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="./public/logo buyzada (sem fundo).png" alt="logo do site buyzada">
+                </div>
+                <span class="logo-text"><strong>Buy</strong>zera</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="ofertas-relampago.html" class="nav-link nav-link-flash active">Relâmpago ⚡</a>
+                <a href="index.html#categorias" class="nav-link">Categorias</a>
+                <a href="ofertas.html" class="nav-link">Produtos</a>
+                <a href="index.html#parceiros" class="nav-link">Parceiros</a>
+            </nav>
+
+            <a href="index.html" class="header-cta">Voltar ao Início</a>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="ofertas.html" class="nav-link">Ofertas</a>
+            <a href="ofertas-relampago.html" class="nav-link nav-link-flash active">Relâmpago ⚡</a>
+            <a href="index.html#categorias" class="nav-link">Categorias</a>
+            <a href="index.html#parceiros" class="nav-link">Parceiros</a>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="relampago-main">
+        <div class="cyber-grid-bg"></div>
+
+        <!-- Hero Section com Timer -->
+        <div class="flash-hero">
+            <div class="container">
+                <div class="flash-header-content">
+                    <div class="flash-text">
+                        <span class="flash-badge">⚡ TEMPO LIMITADO</span>
+                        <h1>Ofertas Relâmpago</h1>
+                        <p>O futuro da economia está aqui. Descontos agressivos por tempo limitado.</p>
+                    </div>
+                    <div class="countdown-wrapper">
+                        <div class="countdown-item"><span id="hours">00</span><small>Horas</small></div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item"><span id="minutes">00</span><small>Min</small></div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item"><span id="seconds">00</span><small>Seg</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="relampagoGrid" class="products-grid flash-grid">
+                <!-- O JS vai preencher aqui -->
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-bg-effect"></div>
+        <div class="footer-grid-pattern"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <img src="./public/logo buyzada (sem fundo).png" alt="logo do nosso site">
+                        </div>
+                        <span class="logo-text"><strong>Buy</strong>zera</span>
+                    </a>
+                    <p>Reunimos as melhores ofertas em um só lugar para você economizar.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="index.html#categorias">Categorias</a></li>
+                        <li><a href="index.html#parceiros">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a id="openTerms" style="cursor: pointer;">Termos de Uso</a></li>
+                        <li><button disabled style="background:none;border:none;color:inherit;cursor:pointer;padding:0;font:inherit;">Privacidade</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="affiliate-notice">Este site contém links de afiliados.</p>
+                    <p>© 2026 Buyzera. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="termsOverlay" class="terms-overlay"></div>
+
+    <div id="termsModal" class="terms-modal">
+        <h1>Política de Privacidade</h1>
+        <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como o site <strong>Buyzera</strong> trata as informações dos usuários.</p>
+        <h2>1. Coleta de informações</h2>
+        <p>Não coletamos dados pessoais diretamente. Podemos coletar informações automáticas como endereço IP, tipo de navegador e páginas acessadas por meio de cookies.</p>
+        <h2>2. Uso de cookies</h2>
+        <p>Utilizamos cookies próprios e de terceiros para fins estatísticos e para rastreamento de afiliados da Shopee e Mercado Livre.</p>
+        <h2>3. Compartilhamento de dados</h2>
+        <p>As informações coletadas podem ser compartilhadas com plataformas de terceiros apenas para viabilizar o funcionamento dos links de afiliado.</p>
+        <h2>4. WhatsApp</h2>
+        <p>Ao entrar em contato via WhatsApp, os dados fornecidos serão utilizados exclusivamente para atendimento.</p>
+        <h2>5. Direitos do usuário</h2>
+        <p>O usuário pode solicitar informações, correção ou exclusão de dados, conforme previsto na Lei Geral de Proteção de Dados (LGPD).</p>
+        <h2>6. Alterações</h2>
+        <p>Esta Política de Privacidade pode ser alterada a qualquer momento, sem aviso prévio.</p>
+        <button id="acceptTerms">Aceitar</button>
+    </div>
+
+    <div id="cookieBanner" class="cookie-banner">
+        <p>Utilizamos cookies para melhorar sua experiência e para fins de rastreamento de afiliados. Ao continuar, você concorda com nossa <a id="openTerms">Política de Uso</a>.</p>
+        <button id="acceptCookies">Aceitar</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="ofertas-relampago.js"></script>
+</body>
+</html>
